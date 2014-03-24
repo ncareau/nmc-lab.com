@@ -15,7 +15,7 @@ html, body, hr {
 	border-top:8px solid #A65400;
 }
 .header .branding {
-	padding:25px 0;
+	padding:15px 0;
 }
 .header .branding h1 {
 	color:#fff;
@@ -360,6 +360,11 @@ html, body, hr {
 .blogCategories  {
 	margin:20px 0;	
 }
+
+.blogCategories .nav-list {
+	padding-left:15px;	
+}
+
 .blogCategories h3 {
 	border-bottom:1px solid #e0e0e0;
 	padding-bottom:10px;
@@ -402,6 +407,7 @@ html, body, hr {
 	margin:10px 0;
 }
 .blogDesc h2 {
+        margin-top:0px;
 	margin-bottom:15px;
 }
 .blogDesc p {

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block abouttab %}active{% endblock %}
+
+{% block title %}
+    About Me
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-12 blogDesc">
+        <h2><a href="{{ path('about') }}">Hey! Want to learn who I am ?</a></h2>
+        <p>My name is Nicolas M. Careau. Born in Québec, I am a native French speaker but quickly learned the English language in order to play video games. I've been an avid gamer ever since I got my Super Nintendo when I was 5. Played professionally for some time and then got a job for one of the biggest video game publisher in the world.</p>
+        <p>I am a self-taught programmer who tries to build application and games for everyone to enjoy. I also like to watch lots of TV Shows and movies. I thinker/repair/hack everything I can ameliorate to use in my life. My goal is to share my experience in the gaming and technology industry, my success and my failures alike.</p>
+        <p>I hope you enjoy your stay and don't hesitate to contact me if you want.</p>
+        Contact Information:
+        <ul>
+            <li><b>Email </b>: <a href="mailto:admin@nmc-lab.com">admin@nmc-lab.com</a></li>
+            <li><b>Steam</b> : <a href="http://steamcommunity.com/id/nmclab">NMC</a></li>
+            <li><b>Youtube</b> : <a href="https://www.youtube.com/channel/UCA6O-AE9symRN-diDq2nNjA">NMC</a></li>
+            <li><b>Twitter</b> : <a href="https://twitter.com/nmclab">@nmclab</a></li>
+        </ul>
+    </div>                    
+</div>
+{% endblock %}

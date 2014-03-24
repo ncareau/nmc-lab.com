@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{% block title '' %}Smart App - Best web based online app</title>
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-<div class="wrapper">
-	<div class="header">
-    	<div class="container">
-        	<div class="row branding">
-            	<div class="span6">
-                	<h1 class="pull-left"><a href="index.html">Smart <strong>App</strong></a></h1>
-                </div>   
-                <!--
-                <div class="span6">
-                	<p class="pull-right userInfo"><i class="icon-user"></i> Welcome <strong>Guest!</strong> &nbsp;<a href="#">Please Login</a></p>
-                </div> 
-                -->                    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>NMC-Lab.com - {% block title 'Home' %}</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="container">
+                    <div class="row branding">
+                        <div class="span6">
+                            <img src="{{ asset('img/Lab.Banner1.png') }}" alt="NMC-Lab" />
+                        </div>                  
+                    </div>
+                    <div class="row navigation">
+                        <div class="col-xs-12">
+                            <ul class="nav nav-tabs">
+                                <li class="{% block hometab '' %}"><a href="{{ path('home') }}">Home</a></li>
+                                <li class="{% block codetab '' %}"><a href="{{ path('code') }}">Code</a></li>
+                                <li class="{% block gamestab '' %}"><a href="{{ path('games') }}">Games</a></li>
+                                <li class="{% block techtab '' %}"><a href="{{ path('tech') }}">Technology</a></li>
+                                <li class="{% block abouttab '' %}"><a href="{{ path('about') }}">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>        
             </div>
-            <div class="row navigation">
-	           	<div class="span12">
-                    <ul class="nav nav-tabs">
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a href="tour.html">Code</a></li>
-                      <li><a href="plans_pricing.html">Games</a></li>
-                      <li><a href="blog.html">Technology</a></li>
-                      <li><a href="blog.html">About</a></li>
-                    </ul>
+            <div class="container content">
+                <div class="row">
+                    <div class="row">        	
+                        <div class="col-md-9 col-sm-12 pull-left">
+                            {% block content '' %}
+                        </div>	
+                        <div class="col-md-3">
+                            {% include 'sidebar.html' %}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>        
-    </div>
-	<div class="container content">
-        <div class="row">
-            <div class="span8 leftContent">
-            	{% block content %}{% endblock %}
-            </div>
-            <div class="span4 sidebar">
-                <h2><a href="#" class="btn btn-large btn-warning">Get an account now</a></h2>
-                <form class="well quickSignupForm">
-                  <h3>Quick Sign-up</h3>
-                  <label>Username</label>
-                  <input type="text" class="span3" placeholder="">
-                  <label>Email</label>
-                  <input type="text" class="span3" placeholder="">
-                  <button class="btn btn-large btn-success btnSignup">&nbsp;&nbsp; Sign up &nbsp;&nbsp;</button>
-                </form>
-                <h3>Where do i go from here?</h3>
-                <p>Nullam quis risus eget urna <a href="#">mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-                <h4><a href="#">Get an account now</a></h4>
-            </div>
-    	</div>
-        <div class="footer">
-        	<div class="row">
-            	<div class="span12">
-                    <p class="pull-left">&copy; 2014 - NMC, All rights reserved.</p>
-                    <p class="pull-right"><a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
+                <div class="footer">
+                    <div class="row">
+                        <div class="span12">
+                            <p class="pull-left">&copy; 2014 - NMC, All rights reserved.</p>
+                            <p class="pull-right"><a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</body>
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrap-tab.js"></script>
+
+        <!-- Javascript Files. -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
+        <!-- Analytics. -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-47462177-2', 'nmc-lab.com');
+            ga('send', 'pageview');
+        </script>
+    </body>
 </html>

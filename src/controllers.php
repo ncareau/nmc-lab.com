@@ -11,9 +11,35 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html', array());
 })
-->bind('homepage')
+->bind('home')
 ;
 
+$app->get('/code/', function () use ($app) {
+    return $app['twig']->render('code.html', array());
+})
+->bind('code')
+;
+
+$app->get('/games/', function () use ($app) {
+    return $app['twig']->render('games.html', array());
+})
+->bind('games')
+;
+$app->get('/tech/', function () use ($app) {
+    return $app['twig']->render('tech.html', array());
+})
+->bind('tech')
+;
+$app->get('/about/', function () use ($app) {
+    return $app['twig']->render('about.html', array());
+})
+->bind('about')
+;
+
+//Articles binding.
+$app->mount('/a', include 'articles.php');
+
+//Error binding.
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
@@ -29,3 +55,4 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
+

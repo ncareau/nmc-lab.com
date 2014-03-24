@@ -12,8 +12,12 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
-    // add custom globals, filters, tags, ...
 
+    //Asset Function
+    $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) {
+        return sprintf('http://192.168.1.25/lab/%s', ltrim($asset, '/'));
+    }));
+    
     return $twig;
 }));
 
