@@ -13,12 +13,12 @@ $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 
-    //Asset Function
-    $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) {
-        return sprintf('http://192.168.1.25/lab/%s', ltrim($asset, '/'));
-    }));
-    
-    return $twig;
-}));
+            //Asset Function
+            $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) {
+                return sprintf('http://192.168.1.25/lab/%s', ltrim($asset, '/'));
+            }));
+
+            return $twig;
+        }));
 
 return $app;
