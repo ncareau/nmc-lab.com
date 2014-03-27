@@ -15,7 +15,7 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 
             //Asset Function
             $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) {
-                return sprintf('http://192.168.1.25/lab/%s', ltrim($asset, '/'));
+                return sprintf('http://'.$_SERVER[HTTP_HOST].'/lab/%s', ltrim($asset, '/'));
             }));
 
             return $twig;
