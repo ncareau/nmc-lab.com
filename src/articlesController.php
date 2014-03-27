@@ -4,13 +4,6 @@
 $a = $app['controllers_factory'];
 
 
-
-
-$a->get('/', function () {
-    return 'Blog home page';
-})->bind('article');
-
-
 //Fetch all articles.
 if ($handle = opendir('../src/articles')) {
     while (false !== ($entry = readdir($handle))) {
@@ -22,13 +15,23 @@ if ($handle = opendir('../src/articles')) {
     closedir($handle);
 }
 
+
+$a->get('/', function () use ($periods, $app) {
+    return $app['twig']->render('articlesList.html', array(
+                'articles' => $periods
+    ));
+})->bind('article');
+
+
+
+
 //List files in artciles
 //Foreach month, add articles. 
 foreach ($periods as $period => $articles) {
-    foreach($articles as $article) {
-        $a->get('/' . $period . '/'.$article['url']."/", function () use ($app, $period, $article) {
+    foreach ($articles as $article) {
+        $a->get('/' . $period . '/' . $article['url'] . "/", function () use ($app, $period, $article) {
             return $app['twig']->render('articles.html', array(
-                'article' => $article,
+                        'article' => $article,
             ));
         });
     }
