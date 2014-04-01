@@ -1,9 +1,9 @@
-{% extends "layout.html" %}
+{% extends "layout.html.twig" %}
 
 {% block content %}
 <div class="row">
     <div class="col-xs-12 blogDesc">
-        <h2><a href="{{ path('about') }}">{{ article.title }}</a></h2>
+        <h2><a href="{{ articleUrl(article.period, article.url) }}">{{ article.title }}</a></h2>
         {% include 'articles/' ~ article.period ~ '/' ~ article.htmlpage %}
         <br/>
         <!-- AddThis Button BEGIN -->

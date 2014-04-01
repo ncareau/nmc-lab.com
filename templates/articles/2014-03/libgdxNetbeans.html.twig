@@ -1,0 +1,134 @@
+<h2>Intro</h2>
+This guide shall help you trough the process of creating a new LibGDX project to use in Netbeans 8.0. It will focus on the Desktop and Android versions of the game engine. IOS and Web can still be opened in eclipse (all project folders will still be able to) but this guide won't go over these two. You should be able to keep total compatibility with Eclipse. One or multiple programmer(s) could use the same project with both Eclipse and Netbeans. This guide doesn't need Eclipse at any moment, you don't need to download or install it if you don't want to.<br />
+<br />
+The project name we'll be using today is <b><code>Project123</code></b>. Don't forget to replace this with your project name not only in Netbeans, but also where scripts are used.<br />
+<br />
+
+<h2>Prepare Project</h2>
+<ul>
+    <li><b><span style="font-weight: normal;">Java + JDK, I used version 7 but Netbeans 8 should be able to handle Java 8.&nbsp;</span></b></li>
+    <ul>
+        <li><b><span style="font-weight: normal;">Be aware that if you use 8, there might be compatibility issue with LibGDX and Android devices.</span></b></li>
+        <li><b><span style="font-weight: normal;"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Available on the official Java site</a></span></b></li>
+    </ul>
+    <li>Install Netbeans 8.0&nbsp;</li>
+    <ul>
+        <li><a href="https://netbeans.org/">Available on netbeans.org</a></li>
+    </ul>
+    <li><b><span style="font-weight: normal;">Android: Download and install Android SDK with nbandroid&nbsp;</span></b></li>
+    <ul>
+        <li><a href="http://nbandroid.org/wiki/index.php/Installation">Instruction on the plugin website</a></li>
+    </ul>
+    <li><b><span style="font-weight: normal;">Download LibGDX form the original website.</span></b></li>
+    <ul>
+        <li><b><span style="font-weight: normal;"><a href="http://libgdx.badlogicgames.com/">Official LibGDX Website</a></span></b></li>
+    </ul>
+</ul>
+<br />
+Create a directory named <code>Project123</code> that we will use as the root of our project. Download and unpack the LibGDX files in <code>Project123/libgdx</code>. You will then be able to run <code>Project123/libgdx/gdx-setup-ui.jar</code> to create the libgdx project. Use the following settings:<br />
+<ul>
+    <li>Name: <code>Project123</code></li>
+    <li>Package: <code>com.me.project123</code></li>
+    <li>Game class: <code>Project123</code></li>
+    <li>Destination: Select your root <code>Project123</code> created earlier.</li>
+</ul>
+
+<a href="http://1.bp.blogspot.com/-uype44QaYkg/UypH5ezuYRI/AAAAAAAAINY/z0pYGCnaxWc/s1600/LibGDX.Setup+%25281%2529.PNG"><img border="0" src="http://1.bp.blogspot.com/-uype44QaYkg/UypH5ezuYRI/AAAAAAAAINY/z0pYGCnaxWc/s1600/LibGDX.Setup+%25281%2529.PNG" height="174" width="320" class="img-responsive" /></a>
+<br />
+<h2>Desktop Project</h2>
+Create new Java project in Netbeans.<br />
+<br />
+<code>File</code> -&gt; <code>New Project</code> then <code>Java</code> -&gt; <code>Java Application</code><br />
+<br />
+Use the following settings:<br />
+<ul>
+    <li>Use your project name and append <code>-Netbeans</code> to create the netbeans project.</li>
+    <li>Select the root project folder <code>Project123</code> as the location.</li>
+    <li>Uncheck "Create Main Class"</li>
+</ul>
+<div>
+
+    <a href="http://1.bp.blogspot.com/-2lmdPOscuVA/UypH5Zpy4XI/AAAAAAAAINg/yX40hzVaMGc/s1600/LibGDX.Setup+%25282%2529.PNG"><img border="0" src="http://1.bp.blogspot.com/-2lmdPOscuVA/UypH5Zpy4XI/AAAAAAAAINg/yX40hzVaMGc/s1600/LibGDX.Setup+%25282%2529.PNG" height="220" width="320"  class="img-responsive"/></a>
+
+    <br />
+    Next, right-click your <code>Project123-Netbeans</code> and select <code>Properties</code>.On the <code>Sources</code> pages, enter the following settings:<br />
+    <ul>
+        <li>Add the <code>Project123/Project123/src</code> folder and enter the <code>src</code> label.</li>
+        <li>Add the <code>Project123/Project123-Desktop/src</code> folder under the <code>src-Desktop</code> label.</li>
+    </ul>
+
+    <a href="http://4.bp.blogspot.com/-6P5mIUj4zsU/UypH53f3eLI/AAAAAAAAINo/m-dEChGVYrE/s1600/LibGDX.Setup+%25284%2529.PNG"><img border="0" src="http://4.bp.blogspot.com/-6P5mIUj4zsU/UypH53f3eLI/AAAAAAAAINo/m-dEChGVYrE/s1600/LibGDX.Setup+%25284%2529.PNG" height="230" width="320" class="img-responsive" /></a>
+
+    <div>
+        On the <code>Libraries</code> page. Use the following:
+    </div>
+    <div>
+        <ul>
+            <li>Under the <code>Compile</code> tag. Click <code>Add Jar/Folder</code> and select all ".jar" in the <code>Project123/libgdx</code> directory, except gdx-backend-gwt, gdx-setup-ui, gdx-backend-robovm.</li>
+            <li>Use the Relative Path folder setting.</li>
+        </ul>
+    </div>
+
+    <a href="http://4.bp.blogspot.com/-Vt_uvCqWdoo/UypH5-6r7CI/AAAAAAAAINs/mmlt3PzPAzo/s1600/LibGDX.Setup+%25285%2529.PNG"><img border="0" src="http://4.bp.blogspot.com/-Vt_uvCqWdoo/UypH5-6r7CI/AAAAAAAAINs/mmlt3PzPAzo/s1600/LibGDX.Setup+%25285%2529.PNG" height="230" width="320"  class="img-responsive"/></a>
+
+    <br />
+    <br />
+    You should now be able to run your desktop project. If you run it now using the default config, you will probably get an error that the file <code>data/libgdx.jpg</code> is missing. To fix that, either copy the <code>data</code> folder from <code>Project123-android/asset</code> to your <code>Project123-Netbeans</code> project or create a symlink:
+    <br />
+    <pre class="xml" name="code">
+            //Windows :  
+            mklink /d path/to/Project123-android/asset/data path/to/Project123-Netbeans
+
+            //Linux
+            ln -s  path/to/Project123-android/asset/data path/to/Project123-Netbeans
+    </pre>
+    <br />
+    <br />
+    <h2>Android Project</h2>
+    <div>
+        <div>
+            First, make sure that you have installed the android sdk with the Netbeans plugin nbandroid. Once installed, restart Netbeans to make sure every config and plugins has loaded correctly. Because if it's not loaded correctly, you won't see the Android icon over the project's folder icon.</div>
+        <div>
+            <br /></div>
+        <div>
+            Let's now open our android project:&nbsp;<code>File</code>&nbsp;-&gt;&nbsp;<code>Open Project</code>&nbsp;-&gt; Select the&nbsp;<code>Project123-android</code>&nbsp;folder.<br />
+            <br /></div>
+
+        <a href="http://2.bp.blogspot.com/-PcxGMjCkwvU/UypH5X72lFI/AAAAAAAAINQ/2nq2CSo5rTQ/s1600/LibGDX.Setup+%25283%2529.PNG"><img border="0" src="http://2.bp.blogspot.com/-PcxGMjCkwvU/UypH5X72lFI/AAAAAAAAINQ/2nq2CSo5rTQ/s1600/LibGDX.Setup+%25283%2529.PNG"  class="img-responsive"/></a>
+
+        <br />
+    </div>
+    <br />
+    Now, in order to run the android project, Netbeans needs a compiled version of the default project. In order to do that automatically, we will add a script that will copy the required libs into the android project. Open up the <code>build.xml</code> file from the <code>Project123-Netbeans</code> folder.<br />
+    <br />
+    Add the following just before the <code>&lt;/project&gt;</code> tag and after the <code>--&gt;</code> closing comment tag:<br />
+    <br />
+</div>
+<div>
+    <pre class="xml" name="code">
+        &nbsp; &nbsp; &lt;target name="-post-jar"&gt;
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;copy toDir="${output.dir}/../../Project123-android/libs"&gt;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;fileset file="dist/${ant.project.name}.jar" /&gt;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;fileset file="dist/lib/gdx.jar" /&gt;
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;/copy&gt;
+        &nbsp; &nbsp; &lt;/target&gt;
+    </pre>
+    <br />
+    Now once this is done, Right-Click on your <code>Project123-Netbeans</code> project (not android) and select Clean and Build. This shall compile the .jar needed for android and will copy it in the right directory. <span style="background-color: #b45f06;">You will need to do that each time you change something in the main project and want to run on android.&nbsp;</span><br />
+    <br />
+    After this, you should be able to run the android project. You will then be able to choose a virtual android device or a external device plugged by USB.<br />
+    <br />
+    For reference, here is a screenshot of my view in Netbeans Project tab:<br />
+
+    <a href="http://1.bp.blogspot.com/-5J2tkG9o6C4/UypH8Nz6VEI/AAAAAAAAIN0/mLbf-zf20uI/s1600/LibGDX.Setup+%25286%2529.PNG"><img border="0" src="http://1.bp.blogspot.com/-5J2tkG9o6C4/UypH8Nz6VEI/AAAAAAAAIN0/mLbf-zf20uI/s1600/LibGDX.Setup+%25286%2529.PNG" height="320" width="210" class="img-responsive" /></a>
+
+    <br />
+    I hope this guide helped you. Let me know if you have problems, questions or comments. Thank you for reading!<br />
+    <br />
+    <br />
+    <span style="font-size: x-small;">Reference link:</span><br />
+    <span style="font-size: x-small;"><a href="http://home.heeere.com/tech-libgdx-netbeans.html">http://home.heeere.com/tech-libgdx-netbeans.html</a></span><br />
+    <span style="font-size: x-small;"><a href="https://netbeans.org/">https://netbeans.org/</a></span><br />
+    <span style="font-size: x-small;"><a href="http://www.nbandroid.org/">http://www.nbandroid.org/</a></span><br />
+    <span style="font-size: x-small;"><a href="http://libgdx.badlogicgames.com/">http://libgdx.badlogicgames.com/</a></span>
+</div>

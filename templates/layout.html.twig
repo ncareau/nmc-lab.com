@@ -29,7 +29,7 @@
                         <div class="col-xs-12 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav nav-tabs">
                                 <li class="{% block hometab '' %}"><a href="{{ path('home') }}">Home</a></li>
-                                <li class="{% block articletab '' %}"><a href="{{ path('article') }}">Articles</a></li>
+                                <li class="{% block articletab '' %}"><a href="{{ path('articles') }}">Articles</a></li>
                                 <li class="{% block codetab '' %}"><a href="{{ path('code') }}">Code</a></li>
                                 <li class="{% block gamestab '' %}"><a href="{{ path('games') }}">Games</a></li>
                                 <li class="{% block techtab '' %}"><a href="{{ path('tech') }}">Technology</a></li>
@@ -42,20 +42,19 @@
             <div class="content">
                 <div class="container">
                     <div class="row">
-                        <div class="row">        	
-                            <div class="col-md-9 col-sm-12 pull-left">
+      	
+                            <div class="col-md-9 col-sm-12 col-xs-12 pull-left">
                                 {% block content '' %}
                             </div>	
                             <div class="col-md-3 hidden-xs hidden-sm">
-                                {% include 'sidebar.html' %}
+                                {% include 'sidebar.html.twig' %}
                             </div>
-                        </div>
                     </div>
                     <div class="footer">
                         <div class="row">
                             <div class="span12">
-                                <p class="pull-left">&copy; 2014 - NMC, All rights reserved.</p>
-                                <p class="pull-right"><a href="#">Site Repo</a> &nbsp;|&nbsp; <a href="#"></a></p>
+                                <p class="pull-left">&copy; 2013-2014 - NMC, All rights reserved.</p>
+                                <p class="pull-right"><a href="https://github.com/ncareau/nmc-lab.com">Site Repo</a> &nbsp;|&nbsp; <a href="#">TestLink</a></p>
                             </div>
                         </div>
                     </div>
