@@ -1,14 +1,14 @@
 NMC-Lab.com
 ===
 
-This is the source code to my blog. It is a simplistic website without any database. Written in PHP and built using silex. 
+This is the source code to my blog. It is a simplistic website without any database. Written in PHP and built using Silex.
 
 ## Libs and Resources
-A list of libraries and resources used on the project.
+A list of libraries and ressources used on the project.
 
 PHP:
 
-* **[Silex](http://www.smarty.net/)** - Simple Framework for PHP.
+* **[Silex](http://silex.sensiolabs.org/)** - Simple Framework for PHP.
 
 Front End:
 
@@ -19,9 +19,7 @@ Front End:
 Services
 
 * **[Disqus](http://disqus.com/)** - Comment system.
+* **[Git](http://git-scm.com/)** - Powerfull versionning software use for storing source and editing article. 
 
 ## Info
-The blkog is built without a database. Since i use git quite regurlaly, I'm using it to edit my articles. I create branch for a new article and merge article when they are completed. It allows me to have complete control over the website and all i need is my favorite IDE. Sometimes not having an interface can be difficult but you since you write in HTML, it's easier to get the exact format that you want.
-
-## Config & Install
-composer must be isntalled.
+The blog is built without an active database. For all editing needs, I use git features to branch, edit and merge articles. It allows me to have complete control over the website and all i need is my trusty IDE. Sometimes not having an interface can be difficult and it takes a little longer to write HTML, but it's easier to get the exact format and functionality that I want.
