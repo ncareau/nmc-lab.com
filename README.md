@@ -1,7 +1,8 @@
 NMC-Lab.com
 ===
 
-This is the source code to my blog. It is a simplistic website without any database. Written in PHP and built using Silex.
+This is the source code to my blog: http://nmc-lab.com
+It is a simplistic website without any database. Written in PHP and built using Silex.
 
 ## Libs and Resources
 A list of libraries and ressources used on the project.
