@@ -3,6 +3,5 @@
 
 /vendor/
 
-/nbproject/private
-/.idea/workspace.xml
-/.idea/tasks.xml
+/nbproject/*
+/.idea/*
