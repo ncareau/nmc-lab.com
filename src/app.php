@@ -7,23 +7,27 @@ use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 
 $app = new Application();
+
+require __DIR__.'/../config/config.php';
+
 $app->register(new UrlGeneratorServiceProvider());
 $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
             //Asset Function
-            $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) {
+            $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) use ($app) {
                 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-                return sprintf($protocol . $_SERVER['HTTP_HOST'] . '/lab/%s', ltrim($asset, '/'));
+                return sprintf($protocol . $app['hostname'] . '/%s', ltrim($asset, '/'));
             }));
 
-            $twig->addFunction(new \Twig_SimpleFunction('articleUrl', function ($period, $articleUrl) {
+            //Article URL function.
+            $twig->addFunction(new \Twig_SimpleFunction('articleUrl', function ($period, $articleUrl) use ($app) {
                 $x = explode('-', $period);
                 $link = $x[0] .'/'. $x[1] . '/' . $articleUrl;
                 
                 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-                return sprintf($protocol . $_SERVER['HTTP_HOST'] . '/lab/%s', $link);
+                return sprintf($protocol . $app['hostname'] . '/%s', $link);
             }));
 
             return $twig;

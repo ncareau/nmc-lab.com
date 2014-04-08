@@ -50,8 +50,14 @@ $app->get('/about/', function () use ($app) {
 })->bind('about');
 
 $app->get('/articles/', function () use ($app, $periods) {
+    $allArticles = array();
+    foreach($periods as $period){
+        foreach ($period as $date => $article) {
+            $allArticles[$date] = $article;
+        }
+    }
     return $app['twig']->render('articleList.html.twig', array(
-                'articles' => $periods
+                'articles' => $allArticles
     ));
 })->bind('articles');
 
