@@ -7,5 +7,6 @@ return array(
         'url' => 'how-to-create-new-libgdx-project-netbeans-8',
         'htmlpage' => 'libgdxNetbeans.html.twig',
         'period' => '2014-03',
+        'date' => '2014-03-20',
     ),
 );
