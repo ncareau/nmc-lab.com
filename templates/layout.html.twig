@@ -7,8 +7,12 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        <link rel="stylesheet" href="{{ asset('css/blueimp-gallery.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-image-gallery.3.1.0.min.css') }}">
+
+        <style type="text/css">
+
+        </style>
     </head>
     <body>
         <div class="wrapper">
@@ -104,7 +108,7 @@
             <!-- Javascript Files. -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
             <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-            <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+            <script src="{{ asset('js/jquery.blueimp-gallery.min.js') }}"></script>
             <script src="{{ asset('js/bootstrap-image-gallery.3.1.0.min.js') }}"></script>
             
             <!-- Analytics. -->
@@ -121,7 +125,7 @@
                     m.parentNode.insertBefore(a, m)
                 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-47462177-2', 'nmc-lab.com');
+                ga('create', '{{ appConfig('webstats_ID') }}', '{{ appConfig('webstats_host') }}');
                 ga('send', 'pageview');
             </script>
 
