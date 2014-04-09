@@ -1,135 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>NMC-Lab.com - {% block title 'Home' %}</title>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/blueimp-gallery.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-image-gallery.3.1.0.min.css') }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>NMC-Lab.com - {% block title 'Home' %}</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/blueimp-gallery.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-image-gallery.3.1.0.min.css') }}">
 
-        <style type="text/css">
+    <style type="text/css">
 
-        </style>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="header">
-                <div class="container">
-                    <div class="branding">
-                        <div >
-                            <img src="{{ asset('img/Lab.Banner1.png') }}" alt="NMC-Lab" />
-                            <div class="pull-right navbutton">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                        </div>                  
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="branding">
+                <div>
+                    <img src="{{ asset('img/Lab.Banner1.png') }}" alt="NMC-Lab"/>
+
+                    <div class="pull-right navbutton">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <div class="row navigation">
-                        <div class="col-xs-12 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav nav-tabs">
-                                <li class="{% block hometab '' %}"><a href="{{ path('home') }}">Home</a></li>
-                                <li class="{% block articletab '' %}"><a href="{{ path('articles') }}">Articles</a></li>
-                                <!--
+                </div>
+            </div>
+            <div class="row navigation">
+                <div class="col-xs-12 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-tabs">
+                        <li class="{% block hometab '' %}"><a href="{{ path('home') }}">Home</a></li>
+                        <li class="{% block articletab '' %}"><a href="{{ path('articles') }}">Articles</a></li>
+                        <!--
                                 <li class="{% block codetab '' %}"><a href="{{ path('code') }}">Code</a></li>
                                 <li class="{% block gamestab '' %}"><a href="{{ path('games') }}">Games</a></li>
                                 <li class="{% block techtab '' %}"><a href="{{ path('tech') }}">Technology</a></li>
                                 -->
-                                <li class="{% block abouttab '' %}"><a href="{{ path('about') }}">About</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>        
-            </div>
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-9 col-sm-12 col-xs-12 pull-left">
-                            {% block content '' %}
-                            </div>	
-                            <div class="col-md-3 hidden-xs hidden-sm">
-                                {% include 'sidebar.html.twig' %}
-                            </div>
-                        </div>
-                        <div class="footer">
-                            <div class="row">
-                                <div class="span12">
-                                    <p class="pull-left">&copy; 2013-2014 - NMC, All rights reserved.</p>
-                                    <p class="pull-right"><a href="https://github.com/ncareau/nmc-lab.com">Site Repo</a> &nbsp;|&nbsp; <a href="#">TestLink</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <li class="{% block abouttab '' %}"><a href="{{ path('about') }}">About</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-            <div id="blueimp-gallery" class="blueimp-gallery">
-                <!-- The container for the modal slides -->
-                <div class="slides"></div>
-                <!-- Controls for the borderless lightbox -->
-                <h3 class="title"></h3>
-                <a class="prev">‹</a>
-                <a class="next">›</a>
-                <a class="close">×</a>
-                <a class="play-pause"></a>
-                <ol class="indicator"></ol>
-                <!-- The modal dialog, which will be used to wrap the lightbox content -->
-                <div class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title"></h4>
-                            </div>
-                            <div class="modal-body next"></div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default pull-left prev">
-                                    <i class="glyphicon glyphicon-chevron-left"></i>
-                                    Previous
-                                </button>
-                                <button type="button" class="btn btn-primary next">
-                                    Next
-                                    <i class="glyphicon glyphicon-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12 col-xs-12 pull-left">
+                    {% block content '' %}
+                </div>
+                <div class="col-md-3 hidden-xs hidden-sm">
+                    {% include 'sidebar.html.twig' %}
                 </div>
             </div>
+            <div class="row footer">
+                <div class="col-xs-12">
+                    <p class="pull-left">&copy; 2013-2014 - NMC, All rights reserved.</p>
+                    <p class="pull-right">
+                        <a href="https://github.com/ncareau/nmc-lab.com">Site Repo</a>
+                        <!-- &nbsp;|&nbsp; <a href="#">TestLink</a> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!-- Javascript Files. -->
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-            <script src="{{ asset('js/jquery.blueimp-gallery.min.js') }}"></script>
-            <script src="{{ asset('js/bootstrap-image-gallery.3.1.0.min.js') }}"></script>
-            
-            <!-- Analytics. -->
-            <script>
-                (function(i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function() {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                ga('create', '{{ appConfig('webstats_ID') }}', '{{ appConfig('webstats_host') }}');
-                ga('send', 'pageview');
-            </script>
+<!-- Javascript Files. -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!-- Gallery Plugin. -->
+<script src="{{ asset('js/jquery.blueimp-gallery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-image-gallery.3.1.0.min.js') }}"></script>
+<!-- Adsense . -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
+<!-- Analytics. -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+    ga('create', '{{ appConfig('webstats_ID') }}', '{{ appConfig('webstats_host') }}');
+    ga('send', 'pageview');
+</script>
 
-        </body>
-    </html>
+</body>
+</html>
