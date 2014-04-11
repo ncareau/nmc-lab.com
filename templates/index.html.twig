@@ -7,9 +7,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
+<div class="row">
     <div class="col-xs-12 blogDesc">
-        <h2 class="page-header"><a href="{{ articleUrl(article.period, article.url) }}">{{ article.title }}</a><small>{{ article.date }}</small></h2>
+        <h2 class="page-header"><a href="{{ articleUrl(article.period, article.url) }}">{{ article.title }}</a> <small>{{ article.date }}</small></h2>
         {% include 'articles/' ~ article.period ~ '/' ~ article.htmlpage %}
         <br/>
         <br/>
