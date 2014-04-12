@@ -18,7 +18,7 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
             //Asset Function
             $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) use ($app) {
                 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-                return sprintf($protocol . $app['hostname'] . '/%s', ltrim($asset, '/'));
+                return sprintf($protocol . $app['asset_url'] . '/%s', ltrim($asset, '/'));
             }));
 
             //Article URL function.
