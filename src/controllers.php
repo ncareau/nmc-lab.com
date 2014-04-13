@@ -1,26 +1,39 @@
 <?php
+/**
+ * Controller
+ */
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-//Request::setTrustedProxies(array('127.0.0.1'));
 //Fetch all articles.
-$periods = array();
+$articles = array();
+//Open articles folder.
 if ($handle = opendir('../src/articles')) {
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") {
-            $period = str_replace('.php', '', $entry);
-            $periods[$period] = include('../src/articles/' . $entry);
+    while (false !== ($year = readdir($handle))) {
+        if ($year != "." && $year != "..") {
+
+            //Open the year folder.
+            if ($handle = opendir('../src/articles'. DIRECTORY_SEPARATOR . $year)) {
+                while (false !== ($periods = readdir($handle))) {
+                    if ($periods != "." && $periods != "..") {
+
+                        //Include all articles
+                        $articleFile = include('../src/articles' . DIRECTORY_SEPARATOR . $year . DIRECTORY_SEPARATOR . $periods);
+                        foreach ($articleFile as $date => $article){
+                            $articles[$date] = new Article($article);
+                        }
+                    }
+                }
+            }
+
         }
     }
     closedir($handle);
 }
-end($periods);
-$lastPediod = key($periods);
-$lastArticle = end($periods[$lastPediod]);
+krsort($articles);
+end($articles);
+$lastArticle = $articles[key($articles)];
+reset($articles);
 
 
 $app->get('/', function () use ($app, $lastArticle) {
@@ -49,37 +62,28 @@ $app->get('/about/', function () use ($app) {
     return $app['twig']->render('about.html.twig', array());
 })->bind('about');
 
-$app->get('/articles/', function () use ($app, $periods) {
-    $allArticles = array();
-    foreach($periods as $period){
-        foreach ($period as $date => $article) {
-            $allArticles[$date] = $article;
-        }
-    }
+$app->get('/articles/', function () use ($app, $articles) {
     return $app['twig']->render('articleList.html.twig', array(
-                'articles' => $allArticles
+                'articles' => $articles
     ));
 })->bind('articles');
 
-//Add link alias to specific article.
-$app->get('/2014/03/how-to-create-new-libgdx-project-in-netbeans-8.html', function () use ($app, $periods) {
-    return $app['twig']->render('article.html.twig', array(
-                'article' => $periods['2014-03']['2014-03-20'],
+//Add link alias to specific articles.
+$app->get('/2014/03/how-to-create-new-libgdx-project-in-netbeans-8.html', function () use ($app, $articles) {
+    return $app['twig']->render('articleView.html.twig', array(
+                'article' => $articles['2014-03-20'],
     ));
 });
 
-//All articles binding.        
-$app->get('/{y}/{m}/{articleUrl}/', function ($y, $m, $articleUrl) use ($app, $periods) {
-    if (isset($periods[$y . '-' . $m])) {
-        $periodArticles = $periods[$y . '-' . $m];
-        foreach ($periodArticles as $article) {
-            if ($article['url'] == $articleUrl) {
-                return $app['twig']->render('article.html.twig', array(
+//All articles binding.
+$app->get('/{y}/{m}/{articleUrl}/', function ($y, $m, $articleUrl) use ($app, $articles) {
+        foreach ($articles as $article) {
+            if ($article->url == $articleUrl && $article->getMonth() == $m && $article->getYear() == $y) {
+                return $app['twig']->render('articleView.html.twig', array(
                             'article' => $article
                 ));
             }
         }
-    }
     return $app['twig']->render('articleNotFound.html.twig');
 });
 
@@ -99,6 +103,3 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
-
-
-

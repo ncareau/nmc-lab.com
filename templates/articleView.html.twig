@@ -3,9 +3,9 @@
 {% block articletab %}active{% endblock %}
 
 {% block title %}
-    Article not Found
+   {{ article.title }}
 {% endblock %}
 
 {% block content %}
-    <h2>Article not Found</h2>
+    {% include '_article.html.twig' %}
 {% endblock %}

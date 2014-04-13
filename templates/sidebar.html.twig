@@ -17,6 +17,7 @@
 <div class="blogAuthors">
     <h3>Contact</h3>
     <div>
+        <!-- Twitter Follow Bouton -->
         <a href="https://twitter.com/nmclab" class="twitter-follow-button" data-show-count="false">Follow @nmclab</a>
         <script>!function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
@@ -28,28 +29,18 @@
                 }
             }(document, 'script', 'twitter-wjs');</script>
 
-        <!-- Place this tag where you want the +1 button to render. -->
+        <!-- Google +1 Bouton -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 
-        <!-- Place this tag after the last +1 button tag. -->
-        <script type="text/javascript">
-            (function() {
-                var po = document.createElement('script');
-                po.type = 'text/javascript';
-                po.async = true;
-                po.src = 'https://apis.google.com/js/platform.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-
-        <script src="https://apis.google.com/js/platform.js"></script>
-
+        <!-- Youtube Bouton -->
         <div class="g-ytsubscribe" data-channel="nmclab" data-layout="full" data-count="hidden"></div>
 
+        <!-- Twitch Bouton -->
         <a href="http://twitch.tv/nmclab"><img src="http://streambadge.com/twitch/light/nmclab.png" width="300" height="64" alt="nmclab's Streambadge" style="margin-bottom:5px;"></a>
         <br/>
         <br/>
+
+        <!-- Donate Bouton -->
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="AEP4GQSBM27L6">
@@ -62,8 +53,8 @@
     <!-- AdSense Ad -->
     <ins class="adsbygoogle"
          style="display:block"
-         data-ad-client="ca-pub-0502131612154697"
-         data-ad-slot="5038746037"
+         data-ad-client="{{ appConfig('ad_client') }}"
+         data-ad-slot="{{ appConfig('ad_slot') }}"
          data-ad-format="auto"></ins>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});

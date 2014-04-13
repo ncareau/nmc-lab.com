@@ -1,4 +1,8 @@
 <?php
+/**
+ * Development Config File.
+ */
+
 
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\WebProfilerServiceProvider;

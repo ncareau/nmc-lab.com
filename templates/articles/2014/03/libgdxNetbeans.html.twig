@@ -34,7 +34,9 @@ Create a directory named <code>Project123</code> that we will use as the root of
     <li>Destination: Select your root <code>Project123</code> created earlier.</li>
 </ul>
 
-<a href="http://1.bp.blogspot.com/-uype44QaYkg/UypH5ezuYRI/AAAAAAAAINY/z0pYGCnaxWc/s1600/LibGDX.Setup+%25281%2529.PNG" data-gallery><img border="0" src="http://1.bp.blogspot.com/-uype44QaYkg/UypH5ezuYRI/AAAAAAAAINY/z0pYGCnaxWc/s1600/LibGDX.Setup+%25281%2529.PNG" class="img-responsive center-block"/></a>
+<a href="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" class="img-responsive blogImg center-block"/>
+</a>
 
 <br />
 <h3>Desktop Project</h3>
@@ -49,9 +51,9 @@ Use the following settings:<br />
     <li>Uncheck "Create Main Class"</li>
 </ul>
 
-
-<a href="http://1.bp.blogspot.com/-2lmdPOscuVA/UypH5Zpy4XI/AAAAAAAAINg/yX40hzVaMGc/s1600/LibGDX.Setup+%25282%2529.PNG" data-gallery><img border="0" src="http://1.bp.blogspot.com/-2lmdPOscuVA/UypH5Zpy4XI/AAAAAAAAINg/yX40hzVaMGc/s1600/LibGDX.Setup+%25282%2529.PNG" class="img-responsive center-block"/></a>
-
+<a href="{{ asset(article.getImgPath('LibGDX.Setup.2.PNG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.2.PNG')) }}" class="img-responsive blogImg center-block"/>
+</a>
 <br />
 Next, right-click your <code>Project123-Netbeans</code> and select <code>Properties</code>.On the <code>Sources</code> pages, enter the following settings:<br />
 <ul>
@@ -59,8 +61,9 @@ Next, right-click your <code>Project123-Netbeans</code> and select <code>Propert
     <li>Add the <code>Project123/Project123-Desktop/src</code> folder under the <code>src-Desktop</code> label.</li>
 </ul>
 
-<a href="http://4.bp.blogspot.com/-6P5mIUj4zsU/UypH53f3eLI/AAAAAAAAINo/m-dEChGVYrE/s1600/LibGDX.Setup+%25284%2529.PNG" data-gallery><img border="0" src="http://4.bp.blogspot.com/-6P5mIUj4zsU/UypH53f3eLI/AAAAAAAAINo/m-dEChGVYrE/s1600/LibGDX.Setup+%25284%2529.PNG" class="img-responsive center-block" /></a>
-
+<a href="{{ asset(article.getImgPath('LibGDX.Setup.3.PNG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.3.PNG')) }}" class="img-responsive blogImg center-block"/>
+</a>
 <div>
     On the <code>Libraries</code> page. Use the following:
 </div>
@@ -71,8 +74,9 @@ Next, right-click your <code>Project123-Netbeans</code> and select <code>Propert
     </ul>
 </div>
 
-<a href="http://4.bp.blogspot.com/-Vt_uvCqWdoo/UypH5-6r7CI/AAAAAAAAINs/mmlt3PzPAzo/s1600/LibGDX.Setup+%25285%2529.PNG" data-gallery><img border="0" src="http://4.bp.blogspot.com/-Vt_uvCqWdoo/UypH5-6r7CI/AAAAAAAAINs/mmlt3PzPAzo/s1600/LibGDX.Setup+%25285%2529.PNG"  class="img-responsive center-block"/></a>
-
+<a href="{{ asset(article.getImgPath('LibGDX.Setup.4.PNG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.4.PNG')) }}" class="img-responsive blogImg center-block"/>
+</a>
 <br />
 <br />
 You should now be able to run your desktop project. If you run it now using the default config, you will probably get an error that the file <code>data/libgdx.jpg</code> is missing. To fix that, either copy the <code>data</code> folder from <code>Project123-android/asset</code> to your <code>Project123-Netbeans</code> project or create a symlink:
@@ -96,7 +100,9 @@ You should now be able to run your desktop project. If you run it now using the 
         Let's now open our android project:&nbsp;<code>File</code>&nbsp;-&gt;&nbsp;<code>Open Project</code>&nbsp;-&gt; Select the&nbsp;<code>Project123-android</code>&nbsp;folder.<br />
         <br /></div>
 
-    <a href="http://2.bp.blogspot.com/-PcxGMjCkwvU/UypH5X72lFI/AAAAAAAAINQ/2nq2CSo5rTQ/s1600/LibGDX.Setup+%25283%2529.PNG" data-gallery><img border="0" src="http://2.bp.blogspot.com/-PcxGMjCkwvU/UypH5X72lFI/AAAAAAAAINQ/2nq2CSo5rTQ/s1600/LibGDX.Setup+%25283%2529.PNG"  class="img-responsive center-block"/></a>
+    <a href="{{ asset(article.getImgPath('LibGDX.Setup.5.PNG')) }}" data-gallery>
+        <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.5.PNG')) }}" class="img-responsive blogImg center-block"/>
+    </a>
 
     <br />
 </div>
@@ -114,6 +120,7 @@ Add the following just before the <code>&lt;/project&gt;</code> tag and after th
     &nbsp; &nbsp; &lt;/copy&gt;
     &lt;/target&gt;
 </pre>
+
 <br />
 Now once this is done, Right-Click on your <code>Project123-Netbeans</code> project (not android) and select Clean and Build. This shall compile the .jar needed for android and will copy it in the right directory. <span style="background-color: #b45f06;">You will need to do that each time you change something in the main project and want to run on android.&nbsp;</span><br />
 <br />
@@ -121,7 +128,9 @@ After this, you should be able to run the android project. You will then be able
 <br />
 For reference, here is a screenshot of my view in Netbeans Project tab:<br />
 
-<a href="http://1.bp.blogspot.com/-5J2tkG9o6C4/UypH8Nz6VEI/AAAAAAAAIN0/mLbf-zf20uI/s1600/LibGDX.Setup+%25286%2529.PNG" data-gallery><img border="0" src="http://1.bp.blogspot.com/-5J2tkG9o6C4/UypH8Nz6VEI/AAAAAAAAIN0/mLbf-zf20uI/s1600/LibGDX.Setup+%25286%2529.PNG" class="img-responsive center-block" /></a>
+<a href="{{ asset(article.getImgPath('LibGDX.Setup.6.PNG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.6.PNG')) }}" class="img-responsive blogImg center-block"/>
+</a>
 
 <br />
 I hope this guide helped you. Let me know if you have problems, questions or comments. Thank you for reading!<br />

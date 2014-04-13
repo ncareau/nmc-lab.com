@@ -41,10 +41,10 @@
                         <li class="{% block hometab '' %}"><a href="{{ path('home') }}">Home</a></li>
                         <li class="{% block articletab '' %}"><a href="{{ path('articles') }}">Articles</a></li>
                         <!--
-                                <li class="{% block codetab '' %}"><a href="{{ path('code') }}">Code</a></li>
-                                <li class="{% block gamestab '' %}"><a href="{{ path('games') }}">Games</a></li>
-                                <li class="{% block techtab '' %}"><a href="{{ path('tech') }}">Technology</a></li>
-                                -->
+                            <li class="{% block codetab '' %}"><a href="{{ path('code') }}">Code</a></li>
+                            <li class="{% block gamestab '' %}"><a href="{{ path('games') }}">Games</a></li>
+                            <li class="{% block techtab '' %}"><a href="{{ path('tech') }}">Technology</a></li>
+                        -->
                         <li class="{% block abouttab '' %}"><a href="{{ path('about') }}">About</a></li>
                     </ul>
                 </div>
@@ -59,15 +59,15 @@
                         <!-- AdSense Ad -->
                         <ins class="adsbygoogle"
                              style="display:block"
-                             data-ad-client="ca-pub-0502131612154697"
-                             data-ad-slot="5038746037"
-                             data-ad-format="auto"></ins>
+                             data-ad-client="{{ appConfig('ad_client') }}"
+                             data-ad-slot="{{ appConfig('ad_slot') }}"
+                             data-ad-format="horizontal"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 blogDesc">
+                        <div class="col-xs-12 blogContent">
                             {% block content '' %}
                         </div>
                     </div>
@@ -105,11 +105,25 @@
 <!-- Javascript Files. -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 <!-- Gallery Plugin. -->
 <script src="{{ asset('js/jquery.blueimp-gallery.min.js') }}"></script>
-<!-- Adsense . -->
+
+<!-- AdSense. -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+<!-- Google +1 Script -->
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script src="https://apis.google.com/js/platform.js"></script>
 
 <!-- Analytics. -->
 <script>

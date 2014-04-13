@@ -2,11 +2,15 @@
 
 {% block articletab %}active{% endblock %}
 
+{% block title %}
+    All Articles
+{% endblock %}
+
 {% block content %}
     <h2 class="page-header">All articles</h2>
     
     {% for article in articles %}
-        <span style="margin-bottom: 0px; font-size: 12px; font-weight: bold;">{{ article.date }}:</span><br/>
-        <h4 style="margin-top: 0px;"><a href="#">{{ article.title }}</a></h4>
+        <span style="margin-bottom: 0px; font-size: 12px; font-weight: bold;">{{ article.getDate() }}:</span><br/>
+        <h4 style="margin-top: 0px;"><a href="{{ article.getURL(appConfig('hostname')) }}">{{ article.title }}</a></h4>
     {% endfor %}
 {% endblock %}

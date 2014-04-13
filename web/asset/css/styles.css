@@ -5,9 +5,9 @@ html, body, hr {
 .wrapper {
     width:100%;	
 }
-/*******************************************************************************************************
+/***********************
 => Home + Common
-*******************************************************************************************************/
+************************/
 .header {
     background:#FF8000;
 }
@@ -159,189 +159,9 @@ html, body, hr {
     color:#999;
 }
 
-/*******************************************************************************************************
-=> Try Now Teaser
-*******************************************************************************************************/
-.tryNowTeaser {
-    padding-bottom:20px;
-}
-.btnTryNow {
-    margin-top:5px;
-}
-
-/*******************************************************************************************************
-=> Tour
-*******************************************************************************************************/
-.tourCnt {
-    margin-top:25px;
-}
-.tourCnt .nav {
-    margin-left:0px;
-    margin-right:0px;
-}
-.tourCnt h2 {
-    margin-bottom:10px;
-    margin-left:0px;
-}
-.tourCnt h3 {
-    margin:10px 0;
-}
-.tourCnt hr {
-    margin:25px 0;
-}
-.showcaseCnt p {
-    margin:10px 0 25px 0;
-    text-align:center;		
-}
-.showcaseCnt p.shortDesc {
-    text-align:left;
-    margin:0px;
-}
-
-/*******************************************************************************************************
-=> Plans & Pricing
-*******************************************************************************************************/
-.plansTeaser {
-    margin-top:30px;
-}
-.plansTeaser p {
-    font-size:18px;
-    text-align:center;
-    line-height:25px;
-}
-
-/**************************************************************************************************************
-=> Pricing & Signup Style-1
-**************************************************************************************************************/
-.pricingCntStyle-1 .normal div.pricing {
-    padding:0px;
-    background:#000;
-    margin-bottom:5px;	
-}
-.pricingCntStyle-1 .popular div.pricing {
-    padding:0px;
-    background:#093;	
-    margin-bottom:5px;	
-}
-.pricingCntStyle-1 div.pricing h2 {
-    text-align:center;
-    border-bottom:1px solid #666;
-    font:bold 22px Helvetica, Arial, sans-serif;
-    color:#fff; padding:15px 0;
-}
-.pricingCntStyle-1 .popular div.pricing h2 {
-    border-bottom:1px solid #4db871;
-}
-.pricingCntStyle-1 div.pricing h4 {
-    text-align:center;
-    font:normal 60px Helvetica, Arial, sans-serif;
-    color:#fff; padding:10px 0 0 0;
-}
-.pricingCntStyle-1 div.pricing p {
-    text-align:center;
-    font:normal 13px Helvetica, Arial, sans-serif;
-    color:#fff; font-style:italic;
-    padding:5px 0 15px 0;
-}
-.pricingCntStyle-1 div.features {
-    text-align:center;	
-}
-.pricingCntStyle-1 .popular div.features {
-    background:#dff0dc
-}
-.pricingCntStyle-1 .popular div.features p {
-    color:#357e2b
-}
-.pricingCntStyle-1 div.features ul {
-    margin-top:15px;
-}
-.pricingCntStyle-1 div.features ul li {
-    border-top:1px solid #e0e0e0;
-    padding:8px 0;
-    text-align:left;
-}
-.pricingCntStyle-1 .popular div.features ul li {
-    border-top:1px solid #c1dfbd;
-    padding:8px 0;
-    text-align:left;
-    color:#357e2b;
-}
-
-/**************************************************************************************************************
-=> Pricing & Signup Style-2
-**************************************************************************************************************/
-.pricingCntStyle-2 .well {
-    padding:0px;
-    background:#e1e1e1;
-    margin-bottom:5px;	
-    overflow:hidden;
-    text-align:center;
-    padding-bottom:15px;
-}
-.pricingCntStyle-2 .popular .well {
-    background:#40b8b5;		
-    margin:0px;
-    padding-bottom:15px;
-}
-.pricingCntStyle-2 .well h2 {
-    text-align:center;
-    background:#666;
-    font:bold 22px Georgia, "Times New Roman", Times, serif;
-    color:#fff; padding:10px 0; font-style:italic;
-    border-bottom:2px solid #fff;
-}
-.pricingCntStyle-2 .popular .well h2 {
-    background:#1a5f5d;
-}
-.pricingCntStyle-2 .well h4 {
-    text-align:center;
-    font:normal 50px Georgia, "Times New Roman", Times, serif;
-    color:#000; padding:10px 0 0; 
-}
-.pricingCntStyle-2 .popular .well h4 {
-    color:#fff;
-}
-.pricingCntStyle-2 .well span {
-    text-align:center;
-    font:normal 13px Helvetica, Arial, sans-serif;
-    color:#666;
-    border-bottom:1px solid #ccc;
-    padding:10px 0 15px 0;
-    display:block;
-}
-.pricingCntStyle-2 .popular span {
-    color:#fff;
-    border-bottom:1px solid #bae3e2;
-}
-.pricingCntStyle-2 .well p {
-    text-align:center;
-    font:normal 13px Helvetica, Arial, sans-serif;
-    color:#666;
-    border-bottom:1px solid #ccc;
-    padding:10px 20px;
-    margin:0px;
-}
-.pricingCntStyle-2 .popular .well p {
-    color:#fff;
-    border-bottom:1px solid #bae3e2;
-}
-.pricingCntStyle-2 .well ul {
-    margin:0 0 15px 0;
-}
-.pricingCntStyle-2 .well ul li {
-    border-bottom:1px solid #ccc;
-    padding:5px 0;
-    text-align:center;
-}
-.pricingCntStyle-2 .popular ul li {
-    border-bottom:1px solid #bae3e2;
-    padding:5px 0;
-    color:#fff;
-}
-
-/**************************************************************************************************************
+/***********************
 => Blog
-**************************************************************************************************************/
+************************/
 .blogHeader {
     margin-bottom:20px;	
 }
@@ -406,23 +226,20 @@ html, body, hr {
 .authorInfo p.tags {
     margin:10px 0;
 }
-.blogDesc h2 {
+.blogContent h2 {
     margin-top:0px;
     margin-bottom:15px;
 }
-.blogDesc p {
+.blogContent p {
     margin-bottom:15px;
 }
-.blogDesc p img.thumbnail {
+.blogContent p img.thumbnail {
     margin:0 15px 15px 0;
 }
-.blogCnt hr {
-    margin:20px 0;
-}
 
-/*******************************************************************************************************
+/***********************
 => Responsive Styles
-*******************************************************************************************************/
+************************/
 @media (max-width: 767px) {
     .container {
         width:96%;	
@@ -430,8 +247,9 @@ html, body, hr {
     }		
 }
 
-
-
+/***********************
+=> Nav Buttons
+************************/
 .navbutton button {
     background-color: #ddd;
     border-color: #ddd;
@@ -464,11 +282,20 @@ html, body, hr {
 }
 
 
+/***********************
+=> AdSlot
+************************/
+.blogAdSlot {
+    height: 100px;
+}
 
-.img-responsive {
-   max-width: 80%;
-   margin-top: 25px;
-   margin-bottom: 25px;
+/***********************
+=> Img
+************************/
+.blogImg {
+    max-width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 

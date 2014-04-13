@@ -1,4 +1,8 @@
 <?php
+/**
+ * Application
+ */
+
 
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
@@ -19,15 +23,6 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
             $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) use ($app) {
                 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
                 return sprintf($protocol . $app['asset_url'] . '/%s', ltrim($asset, '/'));
-            }));
-
-            //Article URL function.
-            $twig->addFunction(new \Twig_SimpleFunction('articleUrl', function ($period, $articleUrl) use ($app) {
-                $x = explode('-', $period);
-                $link = $x[0] .'/'. $x[1] . '/' . $articleUrl;
-                
-                $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-                return sprintf($protocol . $app['hostname'] . '/%s', $link);
             }));
 
             //App Config

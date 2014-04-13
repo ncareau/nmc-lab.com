@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Main Config File.
  */
 
@@ -9,9 +9,16 @@ $app['key'] = "USE_A_UNIQUE_KEY_HERE";
 //Host URL
 $app['hostname'] = "nmc-lab.com";
 
+//Admin Email
+$app['admin_email'] = 'admin@nmc-lab.com';
+
 //Asset URL
 $app['asset_url'] = "cdn.nmc-lab.com/web";
 
 //Analytics info
-$app['webstats_ID'] = "XXX";
-$app['webstats_host'] = "XXX";
+$app['webstats_ID'] = "UA-47462177-2";
+$app['webstats_host'] = "nmc-lab.com";
+
+//Ads info
+$app['ad_client'] = "ca-pub-0502131612154697";
+$app['ad_info'] = "5038746037";
