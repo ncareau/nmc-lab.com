@@ -9,11 +9,12 @@ $app['key'] = "USE_A_UNIQUE_KEY_HERE";
 //Host URL
 $app['hostname'] = "nmc-lab.com";
 
+//Asset URL
+$app['asset_url'] = "cdn.nmc-lab.com/web";
+
 //Admin Email
 $app['admin_email'] = 'admin@nmc-lab.com';
 
-//Asset URL
-$app['asset_url'] = "cdn.nmc-lab.com/web";
 
 //Analytics info
 $app['webstats_ID'] = "UA-47462177-2";
