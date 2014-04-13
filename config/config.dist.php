@@ -22,4 +22,4 @@ $app['webstats_host'] = "nmc-lab.com";
 
 //Ads info
 $app['ad_client'] = "ca-pub-0502131612154697";
-$app['ad_info'] = "5038746037";
+$app['ad_slot'] = "5038746037";
