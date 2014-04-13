@@ -3,15 +3,7 @@
  * Controller
  */
 
-use Silex\Provider\MonologServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
-
-//Log
-if(!isset($app['debug'])){
-    $app->register(new MonologServiceProvider(), array(
-        'monolog.logfile' => __DIR__ . '/../var/logs/silex_prod.log',
-    ));
-}
 
 //Fetch all articles.
 $articles = array();
