@@ -27,7 +27,7 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 
             //App Config
             $twig->addFunction(new \Twig_SimpleFunction('appConfig', function ($name) use ($app) {
-                if($app[$name]){
+                if(isset($app[$name])){
                     return $app[$name];
                 }else{
                     return null;
