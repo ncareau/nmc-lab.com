@@ -278,12 +278,7 @@ html, body, hr {
 => Img
 ************************/
 .blogImg {
-    max-width: 80%;
+    max-width: 40%;
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
-
-
-
-
