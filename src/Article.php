@@ -12,8 +12,9 @@ class Article
     public $date;
     public $url;
     public $htmlpage;
+    public $keywords;
 
-    private $attributes = array('title', 'id', 'date', 'url', 'htmlpage');
+    private $attributes = array('title', 'id', 'date', 'url', 'htmlpage', 'keywords');
 
     public function __Construct($record)
     {

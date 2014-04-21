@@ -31,9 +31,6 @@ html, body, hr {
 .header .userInfo a {
     color:#fff;
 }
-.icon-user {
-    background:url(../img/ico_use.png) no-repeat 0 0;
-}
 .header .nav {
     margin-bottom:0px;
 }
@@ -113,37 +110,12 @@ html, body, hr {
     display:block;
     margin:5px 0;
 }
-.content .leftContent .simpleDesign {
-    background:url(../img/ico_design.png) no-repeat 0 25px;
-}
-.content .leftContent .itsFree {
-    background:url(../img/ico_free.png) no-repeat 0 25px;
-}
-.content .leftContent .secureApp {
-    background:url(../img/ico_secure.png) no-repeat 0 25px;
-}
-.content .leftContent .easyUse {
-    background:url(../img/ico_easy_to_use.png) no-repeat 0 25px;
-}
-.content .leftContent .signupTeaser {
-    margin-top:10px;
-}
-.content .leftContent .quickTour {
-    margin-top:20px;
-    margin-bottom:15px;
-}
 .content .sidebar h2 {
     text-align:right;
 }
 .content .sidebar h4,
 .content .sidebar h3 {
     margin-bottom:10px;
-}
-.content .sidebar .quickSignupForm {
-    margin-top:30px;	
-}
-.content .sidebar .btnSignup {
-    margin-top:10px;
 }
 .footer {
     margin-top:15px;
@@ -237,6 +209,10 @@ html, body, hr {
     margin:0 15px 15px 0;
 }
 
+.blogContent .article h2 {
+    margin-bottom:0px;
+}
+
 /***********************
 => Responsive Styles
 ************************/
@@ -281,6 +257,15 @@ html, body, hr {
   background-position: 0 -15px;
 }
 
+.article-meta {
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    display:table-cell;
+    line-height: 20px;
+    vertical-align:middle;
+    color:#cacaca;
+}
 
 /***********************
 => AdSlot
@@ -297,6 +282,8 @@ html, body, hr {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+
 
 
 
