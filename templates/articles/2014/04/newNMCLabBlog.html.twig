@@ -1,7 +1,16 @@
-Hello Everyone. This blog post is about my new blog design and the technology used to built it. The site is built around the idea of no active database like MySQL or PGSQL. I use git feature for my editing needs, branching for new article and merging when completed. The hosting is done on AWS for a more scabale environment.
-
-
-The site is built in PHP and use silex as the framework.
-
-
-
+<br/>
+Hello Everyone. This blog post is about my new blog design and the technology used to built it. The site is built around
+the idea of no active database like MySQL or PGSQL. I use git feature for my editing needs, branching for new article
+and merging when completed. The hosting is done on AWS for a more scabale environment.
+<br/>
+<br/>
+The site is built in PHP and use <b>silex</b> as the framework. The articles meta data is stored in an array which is used to
+map all the diferent URLs. Creating a static page is made by coding the route manually. Each route uses the twig component to
+display the content of the site, which extend the master template <code>layout.html.twig</code>.
+All static assets, (CSS, Images, Javascript) are stored on <b>Amazon Web Service (AWS) - S3</b>.
+I also use <b>AWS CloudFront</b> as the main Content Distribution Network.
+<br/>
+<br/>
+The site is meant for future blog how-tos and article. But also as a super fast canva for easy demoing of PHP code. You can
+Go over at <b>GitHub</b> <a href="https://github.com/ncareau/nmc-lab.com">ncareau/nmc-lab.com</a> to see the source of the site.
+Any feedback or suggestion is appreciated.

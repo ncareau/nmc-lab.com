@@ -6,7 +6,7 @@ return array(
         'id' => '2d90bb61',
         'url' => 'how-to-create-new-libgdx-project-netbeans-8',
         'htmlpage' => 'libgdxNetbeans.html.twig',
-        'keywords' => 'HTPC, Media Center, Gaming, Multimedia',
+        'keywords' => 'LibGDX, Netbeans, Java, Games Dev',
         'date' => '2014-03-20',
     ),
 );

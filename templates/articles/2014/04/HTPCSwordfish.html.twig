@@ -1,26 +1,28 @@
-<h2>Intro</h2>
+<h3>Intro</h3>
 
 Today, I will be proudly displaying my beast of a Media Center. I've had this machine for about a year now and I'm
 currently very happy of how it is right now, enough to talk about it. This machine, called "Swordfish" , is my main
 living room's PC and connected directly into the main TV. We don't have Cable or SAT so a massive hard drive hold
-all of our TV shows and movie, around 12TB of usable space.
+all of our TV shows and movie, around 12TB of usable space. We also game on it, playing the 2d and retro game directly
+on the AMD APU, and streaming 'graphics heavy' games using the Steam In-House streaming.
 <br/>
-I will first talk about the spec of the machine, which will lead me in talking about the general hardware tweaks and
-fixes. I will then talk about the software and configuration used to glue all the parts together.
-<br/>
-<br/>
-<h2>Hardware &amp; Specification</h2>
+
+<a href="{{ asset(article.getImgPath('SAM_0769.JPG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('SAM_0769.JPG')) }}" class="center-block img-responsive blogImg"/>
+</a>
+
+<h3>Hardware &amp; Specification</h3>
 
     <h4>Hardware</h4>
 
     Let's begin by a rundown of all the parts:
 <ul>
-    <li>MotherBoard - <a href="https://www.asus.com/Motherboards/F2A85M_PRO/">Asus F2A85-M Pro</a>.</li>
-    <li>CPU - AMD A10-5800K.</li>
-    <li>Optical - LG CH12LS28 Blu-ray drive.</li>
-    <li>Power Supply - <a href="http://www.corsair.com/en/professional-series-gold-ax850-80-plus-gold-certified-fully-modular-power-supply">Corsair AX850 CMPSU-850AX.</a></li>
-    <li>Memory - Kingston HyperX 8GB 2X4GB DDR3-1600 XMP Dual Channel Memory Kit.</li>
-    <li>CPU Fan (optional) - <a href="http://www.noctua.at/main.php?show=productview&amp;setlng=en&amp;products_id=18">Noctua NH-C12P.</a></li>
+    <li><b>MotherBoard</b> - <a href="https://www.asus.com/Motherboards/F2A85M_PRO/">Asus F2A85-M Pro</a></li>
+    <li><b>CPU</b> - <a href="http://www.amd.com/en-us/products/processors/desktop/a-series-apu">AMD A10-5800K</a> (Has the equivalent of a Radeon HD 7660D)</li>
+    <li><b>Optical</b> - <a href="http://www.lg.com/ca_en/digital-storage-devices/lg-CH12LS28-internal-blu-ray-combo-drive">LG CH12LS28 Blu-ray drive </a></li>
+    <li><b>Power Supply</b> - <a href="http://www.corsair.com/en/professional-series-gold-ax850-80-plus-gold-certified-fully-modular-power-supply">Corsair AX850 CMPSU-850AX</a></li>
+    <li><b>Memory</b> - <a href="http://www.kingston.com/en/memory/hyperx/genesis">Kingston HyperX 8GB 2X4GB DDR3-1600 XMP Dual Channel Memory Kit</a></li>
+    <li><b>CPU Fan</b> (optional) - <a href="http://www.noctua.at/main.php?show=productview&amp;setlng=en&amp;products_id=18">Noctua NH-C12P</a></li>
 </ul>
 
 <h4>Storage</h4>
@@ -29,36 +31,40 @@ fixes. I will then talk about the software and configuration used to glue all th
     Crucial M4 SSD Micron C400128GB
 </a></b>
 
-<br/>
-I decided to go with a dual storage option, where the SSD is for the OS and Apps while the media files are on the HDD. This has worked very good for me since when i had problem with the raid drive, i was still able to boot up the OS and make diagnostic on the drives. It also allows for quick boot up time and super fast applications.
-<br/>
+<br/><br/>
+I decided to go with a dual storage option, where the SSD host the OS and Apps while the media files are on the HDDs.
+This has worked very good for me since when i had minor issues with the raid drive, i was still able to boot up the OS and
+make diagnostic on the drives. It also allows for quick boot up time and super fast applications.
+<br/><br/>
 
 <b><a href="http://techreport.com/review/25391/wd-red-4tb-hard-drive-reviewed">5x Western Digital 3TB Red </a></b>
 
+<br/><br/>
+
+This is what my machine was about, a huge space to store movies, TV Shows, games and everything i could gather on
+the internet. Plug these in a raid 5 and you get 12TB drive with pretty fast read and write speed even with the M/B
+onboard controller. It is quite costly (about the same as all the other pieces together), but I suggest you buy them
+all when you build the computer, because it is difficult (almost impossible) to change the size of the array once
+configured without losing data. Although if you plan to build one yourself, it is entirely up to you to decide of
+the size of the drive.<br/>
 <br/>
-<div>
-    This is what my machine was about, a huge space to store movies, TV Shows, games and everything i could gather on
-    the internet. Plug these in a raid 5 and you get 12TB drive with pretty fast read and write speed even with the M/B
-    onboard controller. It is quite costly (about the same as all the other pieces together), but I suggest you buy them
-    all when you build the computer, because it is difficult (almost impossible) to change the size of the array once
-    configured without losing data. Although if you plan to build one yourself, it is entirely up to you to decide of
-    the size of the drive.<br/>
-    <br/>
-    These also have a great warranty of 5 year where, if a drive fails for any reason, you can cross-ship it (meaning
-    that they send you one before you can send it back) This proves useful when you have one drive starting to fail, you
-    can still use the array while waiting for the drive to arrive and then switch immediately.<br/>
-    <br/>
-    <br/>
+These also have a great warranty of 5 year where, if a drive fails for any reason, you can cross-ship it (meaning
+that they send you one before you can send it back) This proves useful when you have one drive starting to fail, you
+can still use the array while waiting for the drive to arrive and then switch immediately.<br/>
+<br/>
+<br/>
+
+<div class="col-xs-12">
+    <div class="col-xs-6">
+    <a href="{{ asset(article.getImgPath('2014-06-03.5x-500MB.PNG')) }}" data-gallery>
+        <img border="0" src="{{ asset(article.getImgPath('2014-06-03.5x-500MB.PNG')) }}" class="img-responsive blogImg center-block"/>
+    </a>
 </div>
-
-<div class="center-block">
-<a href="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" data-gallery>
-    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" class="img-responsive blogImg"/>
-</a>
-<a href="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" data-gallery>
-    <img border="0" src="{{ asset(article.getImgPath('LibGDX.Setup.1.PNG')) }}" class="img-responsive blogImg" style="width: 50%"/>
-</a>
-
+<div class="col-xs-6">
+    <a href="{{ asset(article.getImgPath('SAM_0756.JPG')) }}" data-gallery>
+        <img border="0" src="{{ asset(article.getImgPath('SAM_0756.JPG')) }}" class="img-responsive blogImg center-block"/>
+    </a>
+</div>
 </div>
 
 <br/>
@@ -73,13 +79,17 @@ need to remove all components of the case including the motherboard. For that re
 can easily remove the unit without having to disconnect any cable on the board. It's quite a tight fit so you
 don't want to have to open it often.<br/>
 <br/>
-The 7 slots of hard drive are really practical and when completed, the case looks awesome inside and outside. I
+The 7 slots of hard drive are really practical and when completed, the case looks awesome inside and out. I
 have also recently added custom SATA power cables and blue Sata III cables from monoprice.com. Here are a few
 photos of the finished product.&nbsp;
 <br/>
+<a href="{{ asset(article.getImgPath('SAM_0723.JPG')) }}" data-gallery>
+    <img border="0" src="{{ asset(article.getImgPath('SAM_0723.JPG')) }}" class="center-block img-responsive blogImg"/>
+</a>
 <br/>
-<h2>Software</h2>
 
+<h2>Software</h2>
+<br/>
 <b>Raid 5</b><br/>
 Before i bought this machine a year ago, the question of soft/hard raid was haunting me. Wheter to use linux
 mraid or anything else. Since i decided to use Windows as my primary OS, I decided to use the Onboard Raid
@@ -92,7 +102,7 @@ Decided to go with Windows because it's the OS i'm more confortable with. For th
 Picture and XBMC for easier navigation as both work with an X360 controller as the main input. I still use keyboard and
 mouse for internet surfing and also to manage the computer and it's media files.<br/>
 <br/>
-Sickbeard is the main TV organizer. With it, I'm able to track every TV Show i want by the day. I use a custom
+<a href="http://sickbeard.com/">Sickbeard</a> is the main TV organizer. With it, I'm able to track every TV Show i want by the day. I use a custom
 build provided by Bricky Box that you can find on his blog : <a href="http://brickybox.com/2013/05/09/sickbeard-with-integrated-torrent-client">brickybox.com/2013/05/09/sickbeard-with-integrated-torrent-client</a>.<br/>
 <br/>
 <b>Gaming</b>
@@ -104,11 +114,11 @@ is quite able to play 2d games like Castle&nbsp;Crasher, Pixel Junk, Hearthstone
 once the streaming won't be able to satisfied my needs, i will probably add a card for gaming.
 <br/>
 <br/>
-<h2>Conclusion</h2>
+
+<h3>Conclusion</h3>
 
 <div>
     I have been using this setup for more than a year now and I can't recommend thios enough, it has been really
     great for me.&nbsp;
 </div>
-
 

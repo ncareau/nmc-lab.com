@@ -31,9 +31,7 @@ if ($handle = opendir('../src/articles')) {
     closedir($handle);
 }
 krsort($articles);
-end($articles);
 $lastArticle = $articles[key($articles)];
-reset($articles);
 
 
 $app->get('/', function () use ($app, $lastArticle) {
