@@ -1,7 +1,10 @@
-
+#Exact server config removed.
 /config/config.php
 
+#Libs and lock removed.
 /vendor/
+composer.lock
 
+#Remove project files from Project.
 /nbproject/*
 /.idea/*

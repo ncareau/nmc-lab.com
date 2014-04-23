@@ -11,6 +11,7 @@ A list of libraries and resources used on the project.
 PHP:
 
 * **[Silex](http://silex.sensiolabs.org/)** - Simple Framework for PHP.
+* **[Composer](https://getcomposer.org/)** - Dependency Manager
 
 Front End:
 
@@ -24,6 +25,10 @@ Services
 * **[Git](http://git-scm.com/)** - Powerful versionning software used for storing source and editing article.
 
 ## Info
-The blog is built without an active database. For all editing needs, I use git features to branch, edit and merge articles. It allows me to have complete control over the website and all i need is my trusty IDE. Sometimes not having an interface can be difficult and it takes a little longer to write HTML, but it's easier to get the exact format and functionality that I want.
+The blog is built without an active database. For all editing needs, I use git features to branch, edit and merge
+articles. It allows me to have complete control over the website and all i need is my trusty IDE. Sometimes not having
+ an interface can be difficult and it takes a little longer to write HTML, but it's easier to get the exact format and
+ functionality that I want.
 
-See [this post]() for more information on the website.
+See [this post](https://nmc-lab.com/2014/04/new-version-nmc-lab-blog/) for more information on the website. Any
+suggestion of feedback is appreciated.
