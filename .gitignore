@@ -1,5 +1,6 @@
 #Exact server config removed.
 /config/config.php
+/web/.htaccess
 
 #Libs and lock removed.
 /vendor/
