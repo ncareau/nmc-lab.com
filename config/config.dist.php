@@ -6,6 +6,9 @@
 //Unique app ID.
 $app['key'] = "USE_A_UNIQUE_KEY_HERE";
 
+//Unique App name
+$app['appname'] = 'NMC-Lab';
+
 //Host URL
 $app['hostname'] = "nmc-lab.com";
 
@@ -14,6 +17,9 @@ $app['asset_url'] = "cdn.nmc-lab.com/web";
 
 //Admin Email
 $app['admin_email'] = 'admin@nmc-lab.com';
+
+//Email From
+$app['email_from'] = 'root@nmc-lab.com';
 
 
 //Analytics info

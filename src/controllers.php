@@ -4,6 +4,33 @@
  */
 
 use Symfony\Component\HttpFoundation\Response;
+use Silex\Provider\MonologServiceProvider;
+
+//Activate Logs
+if($app['debug']){
+    $app->register(new MonologServiceProvider(), array(
+        'monolog.logfile' => __DIR__.'/../var/logs/silex_dev.log',
+    ));
+}else{
+    $app->register(new MonologServiceProvider(), array(
+        'monolog.logfile' => __DIR__.'/../var/logs/silex.log',
+    ));
+
+    $app['monolog'] = $app->share($app->extend('monolog',
+        function($monolog, $app) {
+            if (!$app['debug']) {
+                $monolog->pushHandler(new Monolog\Handler\NativeMailerHandler(
+                    $app['admin_email'],
+                    $app['appname'] . ' -- Error Log',
+                    $app['email_from'],
+                    Monolog\Logger::ERROR
+                ));
+            }
+
+            return $monolog;
+        }));
+}
+
 
 //Fetch all articles.
 $articles = array();
@@ -91,13 +118,13 @@ $app->error(function (\Exception $e, $code) use ($app) {
         return;
     }
 
-    // 404.html, or 40x.html, or 4xx.html, or error.html
-    $templates = array(
-        'errors/' . $code . '.html.twig',
-        'errors/' . substr($code, 0, 2) . 'x.html.twig',
-        'errors/' . substr($code, 0, 1) . 'xx.html.twig',
-        'errors/default.html.twig',
-    );
+    if($code == 404){
+        return new Response($app['twig']->render('errors/404.html.twig', array()), $code);
+    }
 
-    return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+    if($code == 500){
+        return new Response($app['twig']->render('errors/500.html.twig', array()), $code);
+    }
+
+    return new Response($app['twig']->render('errors/default.html.twig', array()), $code);
 });
